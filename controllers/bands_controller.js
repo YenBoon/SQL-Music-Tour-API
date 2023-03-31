@@ -20,7 +20,7 @@ bands.get('/', async (req,res) => {
 })
 
 //FIND A SPECIFIC BAND
-bands.get('/:name', async (rez, res) => {
+bands.get('/:name', async (req, res) => {
     try {
         const foundBand = await Band.findOne({
             where: { name: req.params.name },
